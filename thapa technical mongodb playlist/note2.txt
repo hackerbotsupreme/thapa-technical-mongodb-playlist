@@ -1,0 +1,59 @@
+for the mongodb version check 7
+
+C:\Users\rekha>mongod --version
+db version v7.0.2
+Build Info: {
+    "version": "7.0.2",
+    "gitVersion": "02b3c655e1302209ef046da6ba3ef6749dd0b62a",
+    "modules": [],
+    "allocator": "tcmalloc",
+    "environment": {
+        "distmod": "windows",
+        "distarch": "x86_64",
+        "target_arch": "x86_64"
+    }
+}
+
+C:\Users\rekha>mongosh --version
+2.0.2
+
+C:\Users\rekha>
+
+search for mongodb documenttation and if you want to know how to start off search mongodb manual 
+Start your MongoDB database
+
+C:\Users\rekha>"C:\Program Files\MongoDB\Server\7.0\bin\mongod.exe" --dbpath="c:\data\db"
+{"t":{"$date":"2023-11-04T08:43:08.148+05:30"},"s":"I",  "c":"NETWORK",  "id":4915701, "ctx":"thread1","msg":"Initialized wire specification","attr":{"spec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":21},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":21},"outgoing":{"minWireVersion":6,"maxWireVersion":21},"isInternalClient":true}}}
+{"t":{"$date":"2023-11-04T08:43:08.152+05:30"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"thread1","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+{"t":{"$date":"2023-11-04T08:43:08.169+05:30"},"s":"I",  "c":"NETWORK",  "id":4648602, "ctx":"thread1","msg":"Implicit TCP FastOpen in use."}
+{"t":{"$date":"2023-11-04T08:43:08.210+05:30"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"thread1","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationDonorService","namespace":"config.tenantMigrationDonors"}}
+{"t":{"$date":"2023-11-04T08:43:08.211+05:30"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"thread1","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationRecipientService","namespace":"config.tenantMigrationRecipients"}}
+{"t":{"$date":"2023-11-04T08:43:08.211+05:30"},"s":"I",  "c":"CONTROL",  "id":5945603, "ctx":"thread1","msg":"Multi threading initialized"}
+{"t":{"$date":"2023-11-04T08:43:08.212+05:30"},"s":"I",  "c":"TENANT_M", "id":7091600, "ctx":"thread1","msg":"Starting TenantMigrationAccessBlockerRegistry"}
+....................
+{"t":{"$date":"2023-11-04T08:43:12.588+05:30"},"s":"I",  "c":"NETWORK",  "id":23015,   "ctx":"listener","msg":"Listening on","attr":{"address":"127.0.0.1"}}{"t":{"$date":"2023-11-04T08:43:12.588+05:30"},"s":"I",  "c":"NETWORK",  "id":23016,   "ctx":"listener","msg":"Waiting for connections","attr":{"port":27017,"ssl":"off"}}
+
+if evrything is alright then this command result will stop at , "msg":"Listening on","attr":{"address":"127.0.0.1"}}{"t":{"$date":"2023-11-04T08:43:12.588+05:30"},"s":"I",  "c":"NETWORK",  "id":23016,   "ctx":"listener","msg":"Waiting for connections"
+
+notice , Waiting for connections
+
+and similarly sart your shell do , 
+
+C:\Users\rekha>mongosh
+Current Mongosh Log ID: 6545b864e32d94d02fec8c5b
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.0.2
+Using MongoDB:          7.0.2
+Using Mongosh:          2.0.2
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2023-11-03T21:31:29.406+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+test>
+
+so this is myshell and note at the end it will show test> 
+and :27017 this is by default port number 
+
